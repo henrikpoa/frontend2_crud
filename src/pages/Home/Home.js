@@ -121,8 +121,10 @@ function Home() {
 
   return (
     <div className={styles.home}>   
-      <h1>Lista de Usuários</h1>
-      <button onClick={() => showUserCreateBox()}>Create</button>
+      <h2>Lista de Usuários</h2>
+      <p align="right">
+      <button onClick={() => showUserCreateBox()}>Criar Usuário</button>
+      </p>
       {loading && <p>Carregando dados...</p>}
       {error && <p>{error}</p>}
       <Table striped bordered hover>

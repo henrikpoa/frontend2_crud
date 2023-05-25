@@ -1,13 +1,8 @@
 .home {
-    text-align:center;   
+    text-align:center;
+    margin-top: 1em;
   }
   
 .home p {
     color: #aaa;
   }
-
-/* table{
-  width: 100%;
-  margin-bottom : .5em;  
-  text-align: center;
-} */
