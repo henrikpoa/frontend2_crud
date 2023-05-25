@@ -48,9 +48,7 @@ function Home() {
     });   
   };
 
-  const userCreate = async (e) => {
-    e.preventDefault();
-    setErrorRegister('');
+  const userCreate = () => {    
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
