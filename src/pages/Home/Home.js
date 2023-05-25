@@ -62,7 +62,7 @@ function Home() {
         
     httpConfig(user, 'POST');
     if (!error) {Swal.fire('Usuário Criado')};
-    
+
     setName('');
     setEmail('');
     setPassword('');
@@ -82,7 +82,7 @@ function Home() {
         console.log(objects);
         console.log(objects.name);
         Swal.fire({
-          title: 'Editar Userário',
+          title: 'Editar Usuário',
           html:
             '<input id="id" type="hidden" value='+objects.id+'>' +
             '<input id="name" class="swal2-input" placeholder="Nome" value="'+objects.name+'">' +
