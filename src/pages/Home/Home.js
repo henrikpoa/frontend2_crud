@@ -10,6 +10,11 @@ const url = 'http://localhost:8080/users';
 function Home() {
   const [users, setUsers] = useState([]);
   const { data: items, httpConfig, loading, error} = useFetch(url);
+  const[name, setName] = useState("");
+  const[email, setEmail] = useState("");
+  const[password, setPassword] = useState("");  
+  const[phone, setPhone] = useState("");
+  const[errorRegister, setErrorRegister] = useState("");
 
   // 1 - resgatando dados  
   useEffect(() =>{
@@ -43,7 +48,9 @@ function Home() {
     });   
   };
 
-  const userCreate = () => {
+  const userCreate = async (e) => {
+    e.preventDefault();
+    setErrorRegister('');
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
@@ -55,6 +62,11 @@ function Home() {
         
     httpConfig(user, 'POST');
     if (!error) {Swal.fire('Usuário Criado')};
+    
+    setName('');
+    setEmail('');
+    setPassword('');
+    setPhone('');    
   };
 
   const showEditUserBox = (id) => {    
