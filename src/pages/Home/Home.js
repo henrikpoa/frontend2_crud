@@ -70,7 +70,7 @@ function Home() {
         console.log(objects);
         console.log(objects.name);
         Swal.fire({
-          title: 'Edit User',
+          title: 'Editar Userário',
           html:
             '<input id="id" type="hidden" value='+objects.id+'>' +
             '<input id="name" class="swal2-input" placeholder="Nome" value="'+objects.name+'">' +
@@ -132,8 +132,7 @@ function Home() {
           <td>{user.phone}</td>
           <td><button onClick={()=> handleRemove(user.id)}>Excluir</button>
           <button onClick={()=> showEditUserBox(user.id)}>Editar</button>
-          </td>
-          
+          </td>          
         </tr>
       ))}
       </tbody>}
